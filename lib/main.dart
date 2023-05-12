@@ -79,11 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     key: _riverKey,
                     mousePos: _mousePos,
                     minEnergy: 0,
-                    config: const RiverShaderConfig(
-                      ambientLightColor: Colors.lightBlue,
-                      materialColor: Colors.blue,
-                      lightColor: Colors.white,
-                    ),
+                    config: const RiverShaderConfig(),
                     onUpdate: (energy) {},
                   ),
                 ],

@@ -33,3 +33,4 @@ flutter:
   uses-material-design: true
   shaders:
     - assets/shaders/river_shader.frag
+    - assets/shaders/orb_shader.frag
