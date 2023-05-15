@@ -8,24 +8,24 @@ import 'package:provider/provider.dart';
 
 import '../assets.dart';
 import '../common/reactive_widget.dart';
-import 'river_shader_config.dart';
-import 'river_shader_painter.dart';
+import 'wood_shader_config.dart';
+import 'wood_shader_painter.dart';
 
-class RiverShaderWidget extends StatefulWidget {
-  const RiverShaderWidget({
+class WoodShaderWidget extends StatefulWidget {
+  const WoodShaderWidget({
     super.key,
     required this.config,
     required this.mousePos,
   });
 
-  final RiverShaderConfig config;
+  final WoodShaderConfig config;
   final Offset mousePos;
 
   @override
-  State<RiverShaderWidget> createState() => RiverShaderWidgetState();
+  State<WoodShaderWidget> createState() => WoodShaderWidgetState();
 }
 
-class RiverShaderWidgetState extends State<RiverShaderWidget>
+class WoodShaderWidgetState extends State<WoodShaderWidget>
     with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) => Consumer<Shaders?>(
@@ -38,10 +38,11 @@ class RiverShaderWidgetState extends State<RiverShaderWidget>
             builder: (context, minEnergy, child) {
               return ReactiveWidget(
                 builder: (context, time, size) {
+          
                   return CustomPaint(
                     size: size,
-                    painter: RiverShaderPainter(
-                      shaders.learning,
+                    painter: WoodShaderPainter(
+                      shaders.wood,
                       config: widget.config,
                       time: time,
                       mousePos: widget.mousePos,

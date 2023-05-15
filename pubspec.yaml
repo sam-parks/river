@@ -34,3 +34,5 @@ flutter:
   shaders:
     - assets/shaders/river_shader.frag
     - assets/shaders/orb_shader.frag
+    - assets/shaders/learning_shader.frag
+    - assets/shaders/wood_shader.frag

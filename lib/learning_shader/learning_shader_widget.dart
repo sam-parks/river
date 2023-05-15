@@ -8,24 +8,24 @@ import 'package:provider/provider.dart';
 
 import '../assets.dart';
 import '../common/reactive_widget.dart';
-import 'river_shader_config.dart';
-import 'river_shader_painter.dart';
+import 'learning_shader_config.dart';
+import 'learning_shader_painter.dart';
 
-class RiverShaderWidget extends StatefulWidget {
-  const RiverShaderWidget({
+class LearningShaderWidget extends StatefulWidget {
+  const LearningShaderWidget({
     super.key,
     required this.config,
     required this.mousePos,
   });
 
-  final RiverShaderConfig config;
+  final LearningShaderConfig config;
   final Offset mousePos;
 
   @override
-  State<RiverShaderWidget> createState() => RiverShaderWidgetState();
+  State<LearningShaderWidget> createState() => LearningShaderWidgetState();
 }
 
-class RiverShaderWidgetState extends State<RiverShaderWidget>
+class LearningShaderWidgetState extends State<LearningShaderWidget>
     with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) => Consumer<Shaders?>(
@@ -38,9 +38,10 @@ class RiverShaderWidgetState extends State<RiverShaderWidget>
             builder: (context, minEnergy, child) {
               return ReactiveWidget(
                 builder: (context, time, size) {
+          
                   return CustomPaint(
                     size: size,
-                    painter: RiverShaderPainter(
+                    painter: LearningShaderPainter(
                       shaders.learning,
                       config: widget.config,
                       time: time,
